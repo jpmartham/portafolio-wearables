@@ -4,17 +4,9 @@ title: Inicio
 nav_order: 1
 ---
 
-# Plantilla de documentación con Just the Docs
+# Portafolio de Dispositivos Corporales Otoño 2026
 
-Este repositorio está diseñado para entender como utilizar la plantilla de repositorio que utiliza **"Just the docs"** de Jekyll y el lenguaje **"Markdown"**:
-
-1. **Crear y publicar** el sitio en GitHub Pages.
-2. Aprender la **estructura** típica de un repo de documentación.
-3. Dominar **Markdown** (texto, listas, tablas, código).
-4. Configurar la **navegación** (sidebar, secciones, orden).
-5. Agregar **imágenes, videos** y otros recursos.
-6. Ajustar **estilos** (logo, colores, footer).
-
+Este repositorio se estará actualizando conforme al proceso de la realización del proyecto para la materia de wearables en el semestre actual. Aquí estaran todos los procesos y tareas que se vayan cumpliendo para llegar a la entrega del prototipo final.
 
 Contenido:
 - [1. Propuestas de Proyecto](01-propuestas-de-proyecto.md)
