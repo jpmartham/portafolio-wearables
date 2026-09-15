@@ -10,4 +10,5 @@ Este repositorio se estará actualizando conforme al proceso de la realización 
 
 Contenido:
 - [1. Propuestas de Proyecto](01-propuestas-de-proyecto.md)
+- [2. Planteamiento del problema y estado del arte](02-planteamiento-del-problema-y-estado-del-arte.md)
 
