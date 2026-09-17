@@ -15,6 +15,6 @@ Este repositorio se estará actualizando conforme al proceso de la realización 
 - Juan Pablo Martha
 
 Contenido:
-- [1. Planteamiento del problema y estado del arte](02-planteamiento-del-problema-y-estado-del-arte.md)
-- [2. Análisis Entrevistas e Insights](03-analisis-entrevistas-e-insights.md)
+- [1. Planteamiento del problema y estado del arte](01-planteamiento-del-problema-y-estado-del-arte.md)
+- [2. Análisis Entrevistas e Insights](02-analisis-entrevistas-e-insights.md)
 
