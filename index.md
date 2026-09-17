@@ -5,6 +5,7 @@ nav_order: 1
 ---
 
 # Portafolio de Dispositivos Corporales Otoño 2026
+{: .fs-9 }
 
 Este repositorio se estará actualizando conforme al proceso de la realización del proyecto para la materia de wearables en el semestre Otoño 2026. Aquí estaran todos los procesos y tareas que se vayan cumpliendo para llegar a la entrega del prototipo final.
 
