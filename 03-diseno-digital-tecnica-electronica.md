@@ -174,16 +174,23 @@ El arnés corre por dentro, entre el forro y la tela exterior. Sale del pod haci
 
 Cada extremo termina en un conector, para que nada quede cosido de forma permanente al textil.
 
+### Ilustración conceptual (ejemplo)
+
+![Render conceptual del chaleco negro visto desde atrás: dos módulos Peltier en la parte alta de la espalda, un pod de control en la espalda media, la batería en la espalda baja y un arnés naranja que cruza al costado izquierdo hacia una película calefactora y un botón en el frente.]({{ '/assets/img/04-diseno-tecnico/ilustracion-conceptual.jpg' | relative_url }})
+
+Figura 3. Ilustración conceptual generada con IA (Nano Banana Pro), solo como referencia visual. Las proporciones, la forma de la prenda y la posición de los módulos no son exactas; la distribución técnica es la de la Figura 2.
+{: .fs-2 .text-grey-dk-000 }
+
 ### Patrón y muestra textil
 
 ![Tres piezas de patrón en papel kraft: mitad de delantero, costado y espalda.]({{ '/assets/img/04-diseno-tecnico/patrones.jpg' | relative_url }})
 
-Figura 3. Patrón: mitad de delantero (izquierda), costado (centro) y espalda (derecha).
+Figura 4. Patrón: mitad de delantero (izquierda), costado (centro) y espalda (derecha).
 {: .fs-2 .text-grey-dk-000 }
 
 ![Chaleco negro sin mangas, con cierre frontal al centro, cortado a partir del patrón.]({{ '/assets/img/04-diseno-tecnico/chaleco-prototipo.jpg' | relative_url }})
 
-Figura 4. Muestra del chaleco que sirve de base para integrar la electrónica.
+Figura 5. Muestra del chaleco que sirve de base para integrar la electrónica.
 {: .fs-2 .text-grey-dk-000 }
 
 ---
