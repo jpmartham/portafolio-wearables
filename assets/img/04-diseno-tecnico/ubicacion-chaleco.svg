@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 860" width="1500" height="860" font-family="Helvetica, Arial, sans-serif">
+  <title>Ubicación de componentes y arnés en el chaleco</title>
+  <style>
+    .t1{font-size:26px;font-weight:700;fill:#1a1a1a}
+    .t2{font-size:15px;fill:#555}
+    .vh{font-size:17px;font-weight:700;fill:#1a1a1a}
+    .lb{font-size:13px;fill:#1a1a1a;font-weight:700}
+    .sm{font-size:12px;fill:#555}
+    .vest{fill:#2b2b2b;stroke:#111;stroke-width:2}
+    .seam{stroke:#777;stroke-width:1.5;stroke-dasharray:6 5;fill:none}
+    .har{stroke:#FFB74D;stroke-width:5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .lead{stroke:#666;stroke-width:1.2;fill:none}
+    .cx{fill:#fff;stroke:#E00034;stroke-width:3}
+  </style>
+  <rect width="1500" height="860" fill="#ffffff"/>
+  <text x="40" y="48" class="t1">Ubicación en el chaleco y ruta del arnés</text>
+  <text x="40" y="74" class="t2">Vista exterior · el arnés corre por dentro, entre forro y tela exterior · toda la electrónica se retira para lavar</text>
+
+  <!-- ================= VISTA FRONTAL ================= -->
+  <text x="350" y="122" class="vh" text-anchor="middle">Vista frontal</text>
+  <path class="vest" d="M185 160 L285 140 Q350 230 415 140 L515 160 Q488 270 552 350 L562 740 L138 740 L148 350 Q212 270 185 160 Z"/>
+  <!-- cierre -->
+  <path d="M350 205 V740" stroke="#bbb" stroke-width="3" stroke-dasharray="4 3"/>
+  <!-- costuras de costado -->
+  <path class="seam" d="M170 360 L168 740 M530 360 L532 740"/>
+  <text x="350" y="775" class="sm" text-anchor="middle">delantero ×2 (con cierre al centro) · costados ×2</text>
+
+  <!-- película pecho: lado izquierdo del usuario = derecha en vista frontal -->
+  <rect x="385" y="265" width="110" height="80" rx="6" fill="#E57373" fill-opacity=".85" stroke="#fff" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="440" y="300" font-size="12" fill="#fff" text-anchor="middle" font-weight="700">película</text>
+  <text x="440" y="316" font-size="12" fill="#fff" text-anchor="middle" font-weight="700">calefactora</text>
+  <!-- interfaz B en tirante izq -->
+  <circle cx="465" cy="190" r="13" fill="#64B5F6" stroke="#fff" stroke-width="2"/>
+
+  <!-- arnés frontal: entra por costado izq (derecha de la vista) -->
+  <path class="har" d="M548 470 H505 V200 H478 M505 345 H495"/>
+  <circle cx="495" cy="345" r="5" class="cx"/>
+  <circle cx="478" cy="200" r="5" class="cx"/>
+  <circle cx="548" cy="470" r="6" class="cx"/>
+
+  <!-- etiquetas frontal -->
+  <path class="lead" d="M440 345 L440 420 L600 420"/>
+  <text x="606" y="416" class="lb">Zona pecho (J3)</text>
+  <text x="606" y="432" class="sm">solo calor · pendiente</text>
+  <path class="lead" d="M478 190 L600 190"/>
+  <text x="606" y="186" class="lb">Interfaz B (J4)</text>
+  <text x="606" y="202" class="sm">botón + LED · tirante izq.</text>
+  <path class="lead" d="M554 470 L600 520"/>
+  <text x="606" y="520" class="lb">Arnés llega por el</text>
+  <text x="606" y="536" class="lb">costado izquierdo</text>
+  <text x="606" y="552" class="sm">desde el pod (espalda)</text>
+
+  <!-- ================= VISTA POSTERIOR ================= -->
+  <text x="1050" y="122" class="vh" text-anchor="middle">Vista posterior</text>
+  <path class="vest" d="M885 160 L985 140 Q1050 168 1115 140 L1215 160 Q1188 270 1252 350 L1262 740 L838 740 L848 350 Q912 270 885 160 Z"/>
+  <path class="seam" d="M870 360 L868 740 M1230 360 L1232 740"/>
+  <text x="1050" y="775" class="sm" text-anchor="middle">espalda (centro marcado en el patrón) · costados ×2</text>
+
+  <!-- módulos nuca: izq del usuario = izquierda en vista posterior -->
+  <rect x="955" y="180" width="62" height="62" rx="6" fill="#BA68C8" stroke="#fff" stroke-width="2"/>
+  <text x="986" y="217" font-size="16" fill="#fff" text-anchor="middle" font-weight="700">A</text>
+  <rect x="1083" y="180" width="62" height="62" rx="6" fill="#BA68C8" stroke="#fff" stroke-width="2"/>
+  <text x="1114" y="217" font-size="16" fill="#fff" text-anchor="middle" font-weight="700">B</text>
+
+  <!-- pod -->
+  <rect x="1005" y="360" width="90" height="60" rx="8" fill="#42A5F5" stroke="#fff" stroke-width="2"/>
+  <text x="1050" y="395" font-size="14" fill="#fff" text-anchor="middle" font-weight="700">POD</text>
+
+  <!-- batería -->
+  <rect x="985" y="590" width="50" height="84" rx="6" fill="#EF5350" stroke="#fff" stroke-width="2"/>
+  <rect x="1065" y="590" width="50" height="84" rx="6" fill="#EF5350" stroke="#fff" stroke-width="2"/>
+  <rect x="1038" y="615" width="24" height="34" rx="3" fill="#FFCDD2" stroke="#fff"/>
+
+  <!-- arnés posterior -->
+  <path class="har" d="M1030 360 V275 H986 V242 M1070 360 V275 H1114 V242"/>
+  <path class="har" d="M1050 420 V585"/>
+  <path class="har" d="M1005 400 H852"/>
+  <circle cx="986" cy="245" r="5" class="cx"/>
+  <circle cx="1114" cy="245" r="5" class="cx"/>
+  <circle cx="1050" cy="580" r="6" class="cx"/>
+  <circle cx="852" cy="400" r="6" class="cx"/>
+
+  <!-- etiquetas posterior -->
+  <path class="lead" d="M1145 211 L1290 211"/>
+  <text x="1296" y="200" class="lb">Módulos A y B</text>
+  <text x="1296" y="216" class="sm">nuca · frío / calor</text>
+  <text x="1296" y="232" class="sm">J1 · J2</text>
+  <path class="lead" d="M1095 390 L1290 390"/>
+  <text x="1296" y="386" class="lb">Pod de control</text>
+  <text x="1296" y="402" class="sm">espalda media</text>
+  <path class="lead" d="M1115 632 L1290 632"/>
+  <text x="1296" y="620" class="lb">Batería 2S</text>
+  <text x="1296" y="636" class="sm">+ BMS · espalda baja</text>
+  <text x="1296" y="652" class="sm">XT30</text>
+  <path class="lead" d="M852 406 L800 600"/>
+  <text x="700" y="618" class="lb">→ al frente por</text>
+  <text x="700" y="634" class="lb">costado izq.</text>
+
+  <!-- leyenda -->
+  <g transform="translate(40 805)">
+    <path class="har" d="M0 8 H40"/><text x="50" y="13" class="sm">arnés interior (silicón 20/24 AWG)</text>
+    <circle cx="320" cy="8" r="6" class="cx"/><text x="334" y="13" class="sm">punto de desconexión (XT30 / JST-XH)</text>
+    <rect x="620" y="0" width="16" height="16" rx="3" fill="#BA68C8"/><text x="644" y="13" class="sm">módulo Peltier</text>
+    <rect x="760" y="0" width="16" height="16" rx="3" fill="#42A5F5"/><text x="784" y="13" class="sm">pod / interfaz</text>
+    <rect x="900" y="0" width="16" height="16" rx="3" fill="#EF5350"/><text x="924" y="13" class="sm">batería</text>
+    <rect x="1010" y="0" width="16" height="16" rx="3" fill="#E57373" stroke="#999" stroke-dasharray="3 2"/><text x="1034" y="13" class="sm">pendiente / no validado</text>
+  </g>
+</svg>

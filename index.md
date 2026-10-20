@@ -17,4 +17,5 @@ Este repositorio se estará actualizando conforme al proceso de la realización 
 Contenido:
 - [1. Planteamiento del problema y estado del arte](01-planteamiento-del-problema-y-estado-del-arte.md)
 - [2. Análisis Entrevistas e Insights](02-analisis-entrevistas-e-insights.md)
+- [3. Diseño Digital — Técnica y electrónica](03-diseno-digital-tecnica-electronica.md)
 

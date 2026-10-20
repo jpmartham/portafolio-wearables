@@ -1,0 +1,265 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1080" width="1600" height="1080" font-family="Helvetica, Arial, sans-serif">
+  <title>Sistema eléctrico del chaleco térmico: potencia, lógica y actuadores</title>
+  <style>
+    .t1{font-size:26px;font-weight:700;fill:#1a1a1a}
+    .t2{font-size:15px;fill:#555}
+    .hd{font-size:15px;font-weight:700;letter-spacing:.06em}
+    .bt{font-size:15px;font-weight:700;fill:#1a1a1a}
+    .tx{font-size:12.5px;fill:#333}
+    .sm{font-size:11.5px;fill:#555}
+    .pin{font-size:12px;fill:#1a1a1a}
+    .box{fill:#fff;stroke:#333;stroke-width:1.5}
+    .pwr{stroke:#C62828;stroke-width:5;fill:none}
+    .v5{stroke:#E07B00;stroke-width:3;fill:none}
+    .ctl{stroke:#1565C0;stroke-width:2;fill:none}
+    .tec{stroke:#8E24AA;stroke-width:4;fill:none}
+    .fan{stroke:#546E7A;stroke-width:3;fill:none}
+    .htr{stroke:#C62828;stroke-width:3;fill:none;stroke-dasharray:8 4}
+    .har{stroke:#37474F;stroke-width:9;fill:none;stroke-linecap:round}
+    .conn{fill:#37474F}
+  </style>
+  <rect width="1600" height="1080" fill="#ffffff"/>
+
+  <!-- Título -->
+  <text x="40" y="48" class="t1">Sistema eléctrico — chaleco térmico (sistema final)</text>
+  <text x="40" y="74" class="t2">Pod central de control en la espalda + módulos térmicos pasivos conectados por arnés desmontable</text>
+
+  <!-- Encabezados de columna -->
+  <rect x="40" y="100" width="290" height="30" rx="4" fill="#C62828"/>
+  <text x="54" y="121" class="hd" fill="#fff">1 · POTENCIA</text>
+  <rect x="370" y="100" width="770" height="30" rx="4" fill="#1565C0"/>
+  <text x="384" y="121" class="hd" fill="#fff">2 · LÓGICA Y CONTROL — POD (espalda media)</text>
+  <rect x="1180" y="100" width="380" height="30" rx="4" fill="#8E24AA"/>
+  <text x="1194" y="121" class="hd" fill="#fff">3 · ACTUADORES Y SENSORES</text>
+
+  <!-- ===================== 1 · POTENCIA ===================== -->
+  <rect x="60" y="160" width="250" height="100" rx="6" class="box"/>
+  <rect x="80" y="182" width="44" height="66" rx="5" fill="#ECEFF1" stroke="#333"/>
+  <rect x="94" y="176" width="16" height="6" fill="#333"/>
+  <rect x="132" y="182" width="44" height="66" rx="5" fill="#ECEFF1" stroke="#333"/>
+  <rect x="146" y="176" width="16" height="6" fill="#333"/>
+  <text x="186" y="196" class="bt">Batería 2S</text>
+  <text x="186" y="215" class="tx">2× 18650</text>
+  <text x="186" y="232" class="tx">7.4 V nom.</text>
+  <text x="186" y="249" class="sm">espalda baja</text>
+
+  <rect x="60" y="300" width="250" height="62" rx="6" class="box"/>
+  <text x="76" y="326" class="bt">BMS 2S 10 A</text>
+  <text x="76" y="346" class="sm">balanceo + corte sobre/bajo voltaje</text>
+
+  <rect x="60" y="400" width="250" height="48" rx="6" class="box"/>
+  <text x="76" y="430" class="bt">Fusible 5 A</text>
+
+  <rect x="60" y="486" width="250" height="48" rx="6" class="box"/>
+  <text x="76" y="516" class="bt">Interruptor 5 A</text>
+
+  <rect x="60" y="572" width="250" height="62" rx="6" class="box"/>
+  <text x="76" y="598" class="bt">XT30 · desconexión</text>
+  <text x="76" y="618" class="sm">se retira la batería para lavar</text>
+
+  <path d="M185 260 V300" class="pwr"/>
+  <text x="194" y="285" class="sm">B+ · BM · B−</text>
+  <path d="M185 362 V400 M185 448 V486 M185 534 V572" class="pwr"/>
+  <!-- VBAT hacia el pod -->
+  <path d="M310 603 H345 V235 H400" class="pwr"/>
+
+  <!-- Leyenda -->
+  <rect x="60" y="680" width="270" height="360" rx="6" fill="#FAFAFA" stroke="#BDBDBD"/>
+  <text x="76" y="706" class="bt">Leyenda</text>
+  <path d="M76 730 H120" class="pwr"/><text x="130" y="734" class="tx">VBAT 6.0–8.4 V</text>
+  <path d="M76 756 H120" class="v5"/><text x="130" y="760" class="tx">5 V (MP1584)</text>
+  <path d="M76 782 H120" class="ctl"/><text x="130" y="786" class="tx">señal lógica 3.3 V</text>
+  <path d="M76 808 H120" class="tec"/><text x="130" y="812" class="tx">salida Peltier (±, invierte)</text>
+  <path d="M76 834 H120" class="fan"/><text x="130" y="838" class="tx">retorno ventilador (MOSFET)</text>
+  <path d="M76 860 H120" class="htr"/><text x="130" y="864" class="tx">salida calefactor (PWM)</text>
+  <path d="M80 886 H116" class="har"/><text x="130" y="890" class="tx">arnés desmontable</text>
+  <text x="76" y="922" class="sm">GND no se dibuja: todo retorna al</text>
+  <text x="76" y="938" class="sm">punto único de tierra del pod.</text>
+  <text x="76" y="962" class="sm">3V3 y DQ (1-Wire, GPIO10) llegan a</text>
+  <text x="76" y="978" class="sm">J1–J3 como etiquetas de red.</text>
+  <text x="76" y="1002" class="sm">Etiqueta gris = pendiente / no validado.</text>
+  <text x="76" y="1026" class="sm">(B) = interfaz objetivo B.</text>
+
+  <!-- ===================== 2 · POD ===================== -->
+  <rect x="370" y="150" width="770" height="900" rx="10" fill="#F5F8FC" stroke="#1565C0" stroke-width="2" stroke-dasharray="10 6"/>
+
+  <!-- Distribución VBAT -->
+  <rect x="400" y="170" width="300" height="140" rx="6" class="box" stroke="#C62828"/>
+  <text x="414" y="194" class="bt" fill="#C62828">Bus VBAT · 6.0–8.4 V</text>
+  <text x="414" y="216" class="tx">→ L298N A y B (+12V, potencia)</text>
+  <text x="414" y="236" class="tx">→ MP1584 (IN)</text>
+  <text x="414" y="256" class="tx">→ película pecho (vía Q3)</text>
+  <text x="414" y="276" class="tx">→ divisor 100k / 31.5k → GPIO0</text>
+  <text x="414" y="298" class="sm">pistas ≥ 2.5 mm · cable 20 AWG</text>
+
+  <!-- MP1584 -->
+  <rect x="740" y="200" width="120" height="80" rx="6" class="box"/>
+  <text x="754" y="228" class="bt">MP1584</text>
+  <text x="754" y="248" class="tx">buck</text>
+  <text x="754" y="266" class="tx">→ 5.00 V</text>
+  <path d="M700 240 H740" class="pwr"/>
+  <path d="M860 240 H900" class="v5"/>
+
+  <!-- Bus 5 V -->
+  <rect x="900" y="170" width="220" height="140" rx="6" class="box" stroke="#E07B00"/>
+  <text x="914" y="194" class="bt" fill="#E07B00">Bus 5 V</text>
+  <text x="914" y="216" class="tx">→ L298N A y B (lógica)*</text>
+  <text x="914" y="236" class="tx">→ ventiladores A y B (+)</text>
+  <text x="914" y="256" class="tx">→ ESP32 5V vía 1N5819</text>
+  <text x="914" y="276" class="tx">→ LED WS2812 (B)</text>
+  <text x="914" y="298" class="sm">*jumper 5V-EN retirado</text>
+
+  <!-- ESP32 -->
+  <rect x="400" y="350" width="370" height="580" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="2"/>
+  <text x="416" y="378" class="bt">ESP32-C3 SuperMini</text>
+  <text x="416" y="398" class="sm">control manual + límites automáticos</text>
+  <!-- pines (lado derecho) -->
+  <g class="pin" text-anchor="end">
+    <text x="758" y="429">GPIO5 · EN_A (PWM)</text>
+    <text x="758" y="454">GPIO6 · IN_A1</text>
+    <text x="758" y="479">GPIO7 · IN_A2</text>
+    <text x="758" y="522">GPIO20 · FAN_A</text>
+    <text x="758" y="589">GPIO4 · EN_B (PWM)</text>
+    <text x="758" y="614">GPIO3 · IN_B1</text>
+    <text x="758" y="639">GPIO1 · IN_B2</text>
+    <text x="758" y="682">GPIO21 · FAN_B</text>
+    <text x="758" y="772">GPIO2 · HEAT (PWM)</text>
+    <text x="758" y="842">GPIO9 · BTN (B)</text>
+    <text x="758" y="867">GPIO8 · LED (B)</text>
+  </g>
+  <!-- entradas / notas (lado izquierdo) -->
+  <text x="416" y="440" class="pin">5V ← 1N5819</text>
+  <text x="416" y="462" class="pin">GPIO0 ← VBAT ÷ 4.17</text>
+  <text x="416" y="484" class="pin">GPIO10 · 1-Wire</text>
+  <text x="416" y="500" class="sm">  5× DS18B20 (pull-up 4.7–5.1k)</text>
+  <text x="416" y="522" class="pin">3V3 → sensores</text>
+  <rect x="412" y="700" width="160" height="96" rx="5" fill="#fff" stroke="#90CAF9"/>
+  <text x="422" y="720" class="tx" font-weight="700">Interfaz A</text>
+  <text x="422" y="738" class="sm">WiFi AP propio</text>
+  <text x="422" y="754" class="sm">→ 192.168.4.1</text>
+  <text x="422" y="770" class="sm">(validada en banco)</text>
+  <text x="422" y="786" class="sm">modo · setpoint · STOP</text>
+  <text x="416" y="902" class="sm">Firmware: corte si disipador &gt; 60 °C,</text>
+  <text x="416" y="918" class="sm">placa &gt; 41 °C (calor) / &lt; 18 °C (frío)</text>
+
+  <!-- Líneas de control ESP → drivers -->
+  <path d="M770 425 H800 M770 450 H800 M770 475 H800" class="ctl"/>
+  <path d="M770 518 H800" class="ctl"/>
+  <path d="M770 585 H800 M770 610 H800 M770 635 H800" class="ctl"/>
+  <path d="M770 678 H800" class="ctl"/>
+  <path d="M770 768 H800" class="ctl"/>
+  <path d="M770 838 H1095 M770 863 H1095" class="ctl"/>
+
+  <!-- L298N A -->
+  <rect x="800" y="405" width="230" height="90" rx="6" class="box"/>
+  <text x="812" y="425" class="bt">L298N · módulo A</text>
+  <text x="812" y="443" class="sm">puentes en paralelo:</text>
+  <text x="812" y="458" class="sm">ENA=ENB · IN1=IN4 · IN2=IN3</text>
+  <text x="812" y="473" class="sm">OUT1‖OUT4 · OUT2‖OUT3</text>
+  <text x="812" y="488" class="sm">+12V ← VBAT · 5V ← bus 5 V</text>
+  <!-- Q1 -->
+  <rect x="800" y="505" width="230" height="28" rx="5" class="box"/>
+  <text x="812" y="524" class="tx">Q1 MOSFET lógico · ventilador A</text>
+
+  <!-- L298N B -->
+  <rect x="800" y="565" width="230" height="90" rx="6" class="box"/>
+  <text x="812" y="585" class="bt">L298N · módulo B</text>
+  <text x="812" y="603" class="sm">puentes en paralelo:</text>
+  <text x="812" y="618" class="sm">ENA=ENB · IN1=IN4 · IN2=IN3</text>
+  <text x="812" y="633" class="sm">OUT1‖OUT4 · OUT2‖OUT3</text>
+  <text x="812" y="648" class="sm">+12V ← VBAT · 5V ← bus 5 V</text>
+  <!-- Q2 -->
+  <rect x="800" y="665" width="230" height="28" rx="5" class="box"/>
+  <text x="812" y="684" class="tx">Q2 MOSFET lógico · ventilador B</text>
+
+  <!-- Q3 -->
+  <rect x="800" y="752" width="230" height="34" rx="5" class="box"/>
+  <text x="812" y="774" class="tx">Q3 MOSFET lógico · película (VBAT)</text>
+  <text x="800" y="806" class="sm">Q1–Q3: low-side, Vgs(th) &lt; 2.5 V, flyback 1N5819</text>
+  <text x="800" y="822" class="sm">en ventiladores, 10k gate→GND</text>
+
+  <!-- Salidas drivers → conectores -->
+  <path d="M1030 450 H1095" class="tec"/>
+  <path d="M1030 519 H1095" class="fan"/>
+  <path d="M1030 610 H1095" class="tec"/>
+  <path d="M1030 679 H1095" class="fan"/>
+  <path d="M1030 769 H1095" class="htr"/>
+
+  <!-- Conectores del pod -->
+  <rect x="1095" y="420" width="34" height="125" rx="4" class="conn"/>
+  <text x="1112" y="488" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">J1</text>
+  <rect x="1095" y="580" width="34" height="125" rx="4" class="conn"/>
+  <text x="1112" y="648" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">J2</text>
+  <rect x="1095" y="745" width="34" height="50" rx="4" class="conn"/>
+  <text x="1112" y="775" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">J3</text>
+  <rect x="1095" y="826" width="34" height="50" rx="4" class="conn"/>
+  <text x="1112" y="856" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">J4</text>
+
+  <!-- Tierra única -->
+  <rect x="690" y="960" width="430" height="70" rx="6" class="box"/>
+  <path d="M712 978 V990 M700 990 H724 M704 996 H720 M709 1002 H715" stroke="#333" stroke-width="2"/>
+  <text x="740" y="984" class="bt">Punto único de GND (estrella)</text>
+  <text x="740" y="1004" class="sm">BMS P−, L298N ×2, MP1584, ESP32, Q1–Q3, retornos de sensores.</text>
+  <text x="740" y="1020" class="sm">Potencia y sensores no comparten conductor de retorno.</text>
+
+  <!-- ===================== 3 · ACTUADORES ===================== -->
+  <!-- arneses -->
+  <path d="M1129 482 H1180" class="har"/>
+  <path d="M1129 642 H1180" class="har"/>
+  <path d="M1129 770 H1180" class="har"/>
+  <path d="M1129 851 H1180" class="har"/>
+  <!-- VBAT llega a la película por J3 desde Q3 + VBAT: indicado en texto -->
+
+  <!-- Lectura rápida -->
+  <rect x="1180" y="150" width="380" height="230" rx="8" fill="#FAFAFA" stroke="#BDBDBD"/>
+  <text x="1196" y="176" class="bt">Lectura rápida</text>
+  <text x="1196" y="200" class="tx">Energía: batería → BMS → fusible → interruptor</text>
+  <text x="1196" y="218" class="tx">→ XT30 → pod.</text>
+  <text x="1196" y="244" class="tx">Decisión: el ESP32 manda dirección y potencia</text>
+  <text x="1196" y="262" class="tx">(PWM) a un L298N por módulo y enciende o</text>
+  <text x="1196" y="280" class="tx">apaga cada ventilador con un MOSFET.</text>
+  <text x="1196" y="306" class="tx">Módulos pasivos: solo Peltier, ventilador,</text>
+  <text x="1196" y="324" class="tx">termostato y sensores. Sin electrónica activa:</text>
+  <text x="1196" y="342" class="tx">se desconectan (J1–J4) y el textil se lava.</text>
+  <text x="1196" y="366" class="sm">Detalle de pines y conectores: tablas de la página.</text>
+
+  <!-- Módulo A -->
+  <rect x="1180" y="400" width="380" height="150" rx="8" fill="#F3E5F5" stroke="#8E24AA" stroke-width="2"/>
+  <text x="1196" y="424" class="bt">Módulo térmico A · nuca izquierda</text>
+  <text x="1196" y="446" class="tx"><tspan font-weight="700">XT30</tspan> TEC+ / TEC−</text>
+  <text x="1210" y="464" class="sm">– KSD9700 60 °C NC (disipador) en serie</text>
+  <text x="1210" y="480" class="sm">– Peltier 40×40×3.6 mm · frío / calor</text>
+  <text x="1196" y="502" class="tx"><tspan font-weight="700">JST-XH 5p</tspan> FAN+ · FAN− · 3V3 · DQ · GND</text>
+  <text x="1210" y="520" class="sm">– ventilador 5 V 40 mm</text>
+  <text x="1210" y="536" class="sm">– DS18B20 placa (piel) + DS18B20 disipador</text>
+
+  <!-- Módulo B -->
+  <rect x="1180" y="565" width="380" height="150" rx="8" fill="#F3E5F5" stroke="#8E24AA" stroke-width="2"/>
+  <text x="1196" y="589" class="bt">Módulo térmico B · nuca derecha</text>
+  <text x="1196" y="611" class="tx"><tspan font-weight="700">XT30</tspan> TEC+ / TEC−</text>
+  <text x="1210" y="629" class="sm">– KSD9700 60 °C NC (disipador) en serie</text>
+  <text x="1210" y="645" class="sm">– Peltier 40×40×3.6 mm · frío / calor</text>
+  <text x="1196" y="667" class="tx"><tspan font-weight="700">JST-XH 5p</tspan> FAN+ · FAN− · 3V3 · DQ · GND</text>
+  <text x="1210" y="685" class="sm">– ventilador 5 V 40 mm</text>
+  <text x="1210" y="701" class="sm">– DS18B20 placa (piel) + DS18B20 disipador</text>
+
+  <!-- Pecho -->
+  <rect x="1180" y="730" width="380" height="88" rx="8" fill="#FFEBEE" stroke="#9E9E9E" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="1196" y="752" class="bt">Zona pecho · solo calor (delantero)</text>
+  <text x="1196" y="772" class="tx"><tspan font-weight="700">JST-XH 5p</tspan> HEAT+ (VBAT) · HEAT− (Q3) · 3V3 · DQ · GND</text>
+  <text x="1210" y="790" class="sm" fill="#757575">– película de carbono ~5 W · KSD9700 45 °C NC</text>
+  <text x="1210" y="806" class="sm" fill="#757575">– DS18B20 ×1 · pendiente de compra / no validada</text>
+
+  <!-- Interfaz B -->
+  <rect x="1180" y="830" width="380" height="72" rx="8" fill="#E3F2FD" stroke="#9E9E9E" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="1196" y="852" class="bt">Interfaz B · tirante frontal izquierdo</text>
+  <text x="1196" y="872" class="tx"><tspan font-weight="700">JST-XH 4p</tspan> 5V · DIN (GPIO8) · BTN (GPIO9) · GND</text>
+  <text x="1210" y="890" class="sm" fill="#757575">– botón + LED WS2812 · objetivo, no validado</text>
+
+  <!-- Nota de seguridad -->
+  <rect x="1180" y="920" width="380" height="110" rx="8" fill="#FFF8E1" stroke="#F9A825"/>
+  <text x="1196" y="944" class="bt">Doble protección térmica</text>
+  <text x="1196" y="964" class="sm">1. Firmware: lee los 5 DS18B20 y corta por PWM.</text>
+  <text x="1196" y="982" class="sm">2. Hardware: el KSD9700 abre el circuito de la Peltier</text>
+  <text x="1196" y="998" class="sm">    aunque el ESP32 falle o se cuelgue.</text>
+</svg>
